@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+  <body>
+	  <h1>Dealing with Default Browser Styling</h1>
+	<div class="container">
+	  <div class="test">
+		  <figure>
+				  
+				<img src="run.gif" alt="running man" class="imgoutlined">
+				<figcaption>Caption text</figcaption>
+			  
+			  </figure>
+	  </div>
+	  <div class="exp">
+		  <p><strong>The problem:</strong> The image to the left is off-centre.</p>
+		  <p>The blue outline shows the border of the <code>div</code> element.</p>
+		  <p>The image and its caption are inside a <code>figure</code> element.</p>
+		  <p>The red outline shows the border of the <code>img</code> element.</p>
+		  <p>There are no CSS margin or padding styles applied to the <code>figure</code> or <code>image</code> tags.</div>
+	  </div>
+
+	</div>
+	
+	<div class="container">
+		  <div class="test">
+			  <figure>
+					  
+					<img src="run.gif" alt="running man" class="imgoutlined">
+					<figcaption>Caption text</figcaption>
+				  
+				  </figure>
+		  </div>
+		  <div class="exp">
+			<p>The HTML of the <code>div</code> and its contents:</p>
+			<div class="code"><pre><code>&lt;div&gt;
+	&lt;figure&gt;
+  		&lt;img src="run.gif"&gt;
+		&lt;figcaption&gt;Caption text&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;</code></pre></div>
+	
+			</div>
+	</div>
+	
+	<div class="container">
+		  <div class="test">
+			  <figure>
+					  
+					<img src="run.gif" alt="running man" class="imgoutlined">
+					<figcaption>Caption text</figcaption>
+				  
+				  </figure>
+		  </div>
+		  <div class="exp">
+			<p>Using the Web Inspector tool, we can see that default browser styling is being applied to the figure element:</p>
+			<p><img src="default-styling.png" class="inspector"></p>
+			</div>
+	</div>
+	
+	<div class="container">
+		  <div class="test">
+			  <figure>
+					  
+					<img src="run.gif" alt="running man" class="imgoutlined">
+					<figcaption>Caption text</figcaption>
+				  
+				  </figure>
+		  </div>
+		  <div class="exp">
+			<p>Because the default browser styling comes before our custom CSS in the <i>cascade</i>, we can override these styles in our CSS:</p>
+<div class="code"><pre><code>figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+</code></pre></div>
+	
+			</div>
+	</div>
+	
+	<div class="container penultimate">
+		  <div class="test">
+			  <figure>
+					  
+					<img src="run.gif" alt="running man" class="imgoutlined">
+					<figcaption>Caption text</figcaption>
+				  
+				  </figure>
+		  </div>
+		  <div class="exp">
+			<p><strong>The result.</strong></p>
+			<p>Now we can centre the <code>figure</code> element in our CSS.</p>
+		</div>
+	</div>
+	
+	<div class="container ultimate">
+		  <div class="test">
+			  <figure>
+					  
+					<img src="run.gif" alt="running man" class="imgoutlined">
+					<figcaption>Caption text</figcaption>
+				  
+				  </figure>
+		  </div>
+		  <div class="exp">
+			<p><strong>The result.</strong></p>
+			<p>Now we can centre the <code>figure</code> element in our CSS.</p>
+		</div>
+	</div>
+	
+ </body>
+	   
+</html>
